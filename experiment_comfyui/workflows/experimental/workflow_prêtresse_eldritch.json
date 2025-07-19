@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Load Checkpoint",
+      "position": [
+        0,
+        0
+      ],
+      "widgets_values": [
+        "uberRealisticPornMerge_v23Final.safetensors"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncode",
+      "position": [
+        300,
+        -100
+      ],
+      "widgets_values": [
+        "eldritch techno-priestess, glowing fractal skin, black cathedral, crimson light, sacred corruption, ultra detailed, cinematic",
+        "blurry, bad anatomy, lowres, jpeg artifacts, watermark"
+      ],
+      "inputs": {
+        "clip": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "type": "EmptyLatentImage",
+      "position": [
+        300,
+        100
+      ],
+      "widgets_values": [
+        512,
+        768,
+        1
+      ],
+      "inputs": {
+        "vae": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "type": "KSampler",
+      "position": [
+        600,
+        0
+      ],
+      "widgets_values": [
+        20,
+        7.0,
+        "randomize",
+        "euler"
+      ],
+      "inputs": {
+        "model": [
+          1,
+          0
+        ],
+        "positive": [
+          2,
+          0
+        ],
+        "negative": [
+          2,
+          1
+        ],
+        "latent_image": [
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "type": "VAEDecode",
+      "position": [
+        900,
+        0
+      ],
+      "inputs": {
+        "samples": [
+          4,
+          0
+        ],
+        "vae": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "position": [
+        1100,
+        0
+      ],
+      "inputs": {
+        "images": [
+          5,
+          0
+        ]
+      }
+    }
+  ]
+}

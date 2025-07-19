@@ -1,0 +1,66 @@
+.profil-sinner {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+  color: #fff;
+  padding: 2rem;
+  font-family: 'Cinzel', serif;
+}
+
+.profil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+}
+
+.profil-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.profil-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profil-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.profil-name {
+  font-size: 1.8rem;
+}
+
+.profil-offrandes {
+  margin-top: 2rem;
+}
+
+.offrande-item {
+  background: #1a1a1a;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.offrande-text {
+  font-size: 1rem;
+}
+
+.offrande-date {
+  font-size: 0.8rem;
+  color: #aaa;
+}

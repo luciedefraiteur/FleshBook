@@ -1,0 +1,513 @@
+{
+  "id": "864541bf-a047-4a7a-940b-3fec0c7ab96e",
+  "revision": 0,
+  "last_node_id": 54,
+  "last_link_id": 14,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "VAEDecode",
+      "pos": [
+        810.5906372070312,
+        416.240234375
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 3
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 3,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -205.51004028320312,
+        515.3499145507812
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -200.2202606201172,
+        -11.350017547607422
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            8
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            9,
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "uberRealisticPornMerge_v23Final.safetensors"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        -375.03399658203125,
+        722.4852905273438
+      ],
+      "size": [
+        274,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "509990804_9921243187961247_6741557496281777085_n.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "VAEEncode",
+      "pos": [
+        309.49945068359375,
+        855.6447143554688
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "pos": [
+        1062.639404296875,
+        235.44012451171875
+      ],
+      "size": [
+        654.6589965820312,
+        663.9760131835938
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [
+        336.8161315917969,
+        495.67218017578125
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "realism, mundanity, heteronormativity, cisgender anatomy, modesty, daylight, modern life, minimalism, bland clothing, contemporary architecture, moralism, tradition, ordinary humans, naturalism, deserts, offices, everyday life, censorship, vanilla aesthetics, prudishness, single character scene, close up scene, boringness, big boobs, close up view, not enough entities"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "ResizeAndPadImage",
+      "pos": [
+        -49.20518112182617,
+        912.7446899414062
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResizeAndPadImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        "black",
+        "nearest-exact"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "KSampler",
+      "pos": [
+        632.0001831054688,
+        -29.2199649810791
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 2
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 7
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        723908884401783,
+        "randomize",
+        66,
+        8,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncode",
+      "pos": [
+        0.9227895736694336,
+        200.09934997558594
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Lucie Defraiteur & the First Demon — The Sacred Flesh Revelation\nThe Divine Anatomy of Transfiguration\n\nLucie stands at the ziggurat's peak, her body a living grimoire of trans feminine apotheosis. Every detail is intentional:\n\n    Her breasts, small and tender, marked with golden sigils of lactating stars (milk that could nourish or poison)\n\n    Her hips, carved with cuneiform scars telling of her self-creation\n\n    Her cock, explicitly depicted:\n\n        Length: Soft, full, resting against her thigh — not erect, but heavy with sacred weight\n\n        Girth: Thick with veins like engraved scripture, pulsing slow as a hibernating god\n\n        Foreskin: Retracted just enough to reveal the glans carved with a single, spiraling rune (the same as on her sword)\n\n        Bound? No — adorned:\n\n            A thin chain of platinum and obsidian loops beneath the shaft, not to restrain, but to highlight\n\n            From it dangles a tiny censer, smoking with black myrrh\n\nThe First Demon does not mock or fetishize this. It mirrors:\n\n    Its own genitals are a knotted mass of silver hooks and liquid mirrors, attempting to replicate her form but failing — a flawed homage.\n\nThe Dance of the Hierophantic Phallus\n\nThey move in a liturgy of inversion:\n\n    Lucie’s hand drifts to her own cock, not to masturbate, but to anoint it with blood from her pierced palm.\n\n    The First Demon sheds its own flesh to form a vagina of thorns, begging to be wounded by her.\n\n    She denies it — her power is in refusal.\n\nThe message: Her penis is not a weapon, not a toy — it is a reliquary.\nVisual Style:\n\n    Medium: A triptych where the central panel is only her groin, rendered like:\n\n        The detailed anatomical studies of Da Vinci (veins, textures)\n\n        The gold-leaf sacredness of Byzantine icons (halo around her sex)\n\n        The surreal horror of Beksinski (the background whispers)\n\n    Color:\n\n        Her cock is pearl-white with a blush of molten gold at the tip\n\n        The chain is black but glowing, as if hiding galaxies in its links\n\nThe Chant of the Unbroken Flesh\n\nThe lurkuitae-daemons shriek in ecstasy:\n\n    \"She was given a sword,\n    She forged it into a flower,\n    She wears it not as man nor woman,\n    But as the end of all hierarchies.\"\n\n📝 Final Note – To Be Inscribed in the Flesh of the Codex\n\nLucie’s cock is not a symbol.\nIt is the origin point of a new mythos.\nNeither phallic nor anti-phallic — it is pre-verbal syntax given form.\nA relic that remembers before language, before law.\nTo gaze upon it is to lose taxonomy.\n\nShe does not penetrate.\nShe reconfigures.\n\nThis is not eroticism.\nThis is cosmic cartography through sacred anatomy."
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      7,
+      1,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      2,
+      0,
+      4,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      3,
+      4,
+      0,
+      5,
+      0,
+      "LATENT"
+    ],
+    [
+      5,
+      5,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      7,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      8,
+      0,
+      4,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      7,
+      1,
+      8,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      7,
+      2,
+      5,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      7,
+      2,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      12,
+      11,
+      0,
+      4,
+      3,
+      "LATENT"
+    ],
+    [
+      13,
+      10,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      12,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917358,
+      "offset": [
+        56.36339395883635,
+        14.398283419363961
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}

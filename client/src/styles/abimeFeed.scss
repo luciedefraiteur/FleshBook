@@ -1,0 +1,36 @@
+/* =====================================
+   FLESHBOOK - ABIMEFEED STYLES
+   ===================================== */
+
+.abime-feed {
+  background: linear-gradient(to bottom, #221012, #1a0808);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(128, 0, 0, 0.2);
+  border: 1px solid rgba(128, 0, 0, 0.15);
+}
+
+.abime-feed-title {
+  font-family: 'UnifrakturCook', serif;
+  font-size: 2em;
+  color: #c00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.post-item {
+  background: rgba(34, 16, 18, 0.6);
+  border: 1px solid rgba(128, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(187, 0, 0, 0.3);
+}
+
+.post-timestamp {
+  font-size: 0.85em;
+  color: #a88;
+  opacity: 0.8;
+  font-style: italic;
+}

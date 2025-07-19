@@ -1,0 +1,22 @@
+/* =====================================
+   FLESHBOOK - HEADER STYLES
+   ===================================== */
+
+.header {
+  background: linear-gradient(90deg, #0b0000, #221012);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #990000;
+}
+
+.header-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5em;
+  color: #f5e6e6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-logo {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 0 8px #990000);
+}

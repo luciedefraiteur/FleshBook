@@ -1,0 +1,137 @@
+/* =====================================
+   FLESHBOOK - STYLES SPÉCIALISÉS
+   ===================================== */
+
+/* Header Styles */
+.header {
+  background: linear-gradient(90deg, #0b0000, #221012);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #990000;
+}
+
+.header-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5em;
+  color: #f5e6e6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-logo {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 0 8px #990000);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background: linear-gradient(180deg, #0b0000, #221012);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-right: 2px solid #990000;
+}
+
+.sidebar-section-title {
+  font-family: 'UnifrakturCook', serif;
+  font-size: 1.8em;
+  color: #e10600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-user-item {
+  background: rgba(34, 16, 18, 0.8);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-user-item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(90deg, rgba(187, 0, 0, 0.1), rgba(187, 0, 0, 0.05));
+}
+
+/* AbimeFeed Styles */
+.abime-feed {
+  background: linear-gradient(to bottom, #221012, #1a0808);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(128, 0, 0, 0.2);
+  border: 1px solid rgba(128, 0, 0, 0.15);
+}
+
+.abime-feed-title {
+  font-family: 'UnifrakturCook', serif;
+  font-size: 2em;
+  color: #c00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.post-item {
+  background: rgba(34, 16, 18, 0.6);
+  border: 1px solid rgba(128, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(187, 0, 0, 0.3);
+}
+
+.post-timestamp {
+  font-size: 0.85em;
+  color: #a88;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* ConnexionForm Styles */
+.connexion-form {
+  background: rgba(34, 16, 18, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.connexion-form-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8em;
+  color: #f5e6e6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.connexion-form-input {
+  background: rgba(34, 16, 18, 0.8);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.connexion-form-input:focus {
+  transform: scale(1.05);
+  border-color: #e10600;
+}
+
+/* InscriptionForm Styles */
+.inscription-form {
+  background: rgba(34, 16, 18, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.inscription-form-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8em;
+  color: #f5e6e6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.inscription-form-input {
+  background: rgba(34, 16, 18, 0.8);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.inscription-form-input:focus {
+  transform: scale(1.05);
+  border-color: #e10600;
+}

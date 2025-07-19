@@ -1,0 +1,28 @@
+/* =====================================
+   FLESHBOOK - SIDEBAR STYLES
+   ===================================== */
+
+.sidebar {
+  background: linear-gradient(180deg, #0b0000, #221012);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-right: 2px solid #990000;
+}
+
+.sidebar-section-title {
+  font-family: 'UnifrakturCook', serif;
+  font-size: 1.8em;
+  color: #e10600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-user-item {
+  background: rgba(34, 16, 18, 0.8);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-user-item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(90deg, rgba(187, 0, 0, 0.1), rgba(187, 0, 0, 0.05));
+}

@@ -1,0 +1,62 @@
+$dark-bg: #0b0000;
+$deep-red: #990000;
+$blood: #e10600;
+$bone: #f5e6e6;
+$ritual-purple: #2d0032;
+
+body {
+  background: radial-gradient(ellipse at center, #1a0000 0%, #000000 100%);
+  animation: pulsation 12s ease-in-out infinite;
+}
+
+@keyframes pulsation {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.sigil {
+  animation: sigil-glow 3s infinite;
+}
+
+@keyframes sigil-glow {
+  0%, 100% { filter: drop-shadow(0 0 4px #990000); }
+  50% { filter: drop-shadow(0 0 12px #e10600); }
+}
+
+.blood-text {
+  background: linear-gradient(45deg, $blood, #ff0000, $deep-red);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bloodFlow 3s infinite;
+}
+
+.floating-element {
+  animation: ghostlyFloat 4s infinite ease-in-out;
+}
+
+.pulsing-border {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes bloodFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes ghostlyFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(8px) rotate(-1deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 5px $deep-red; }
+  50% { box-shadow: 0 0 20px $blood; }
+}
+
+.theme-transition {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}

@@ -1,0 +1,57 @@
+/* =====================================
+   FLESHBOOK - FORMS STYLES
+   ===================================== */
+
+/* ConnexionForm Styles */
+.connexion-form {
+  background: rgba(34, 16, 18, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.connexion-form-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8em;
+  color: #f5e6e6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.connexion-form-input {
+  background: rgba(34, 16, 18, 0.8);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.connexion-form-input:focus {
+  transform: scale(1.05);
+  border-color: #e10600;
+}
+
+/* InscriptionForm Styles */
+.inscription-form {
+  background: rgba(34, 16, 18, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.inscription-form-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8em;
+  color: #f5e6e6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.inscription-form-input {
+  background: rgba(34, 16, 18, 0.8);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.inscription-form-input:focus {
+  transform: scale(1.05);
+  border-color: #e10600;
+}
