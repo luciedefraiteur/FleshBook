@@ -19,6 +19,9 @@ Bienvenue dans l'antre de l'obscurité numérique, où les pécheurs se rassembl
 - **Backend** : Node.js et Express pour orchestrer les rituels.
 - **Base de données** : MongoDB pour conserver les âmes et les offrandes.
 
+### Prérequis
+- **MongoDB** : Assurez-vous d'avoir MongoDB installé et en cours d'exécution sur votre machine. Vous pouvez le télécharger depuis [MongoDB](https://www.mongodb.com/try/download/community).
+
 ### Installation
 1. Clonez le dépôt :
    ```bash
