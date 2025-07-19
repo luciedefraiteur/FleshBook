@@ -26,12 +26,12 @@ Bienvenue dans l'antre de l'obscurité numérique, où les pécheurs se rassembl
    ```
 2. Installez les dépendances :
    ```bash
-   cd fleshbook/client
+   cd fleshbook
    npm install
    ```
 3. Lancez l'application :
    ```bash
-   npm start
+   npm run dev
    ```
 
 ### Contribuer
