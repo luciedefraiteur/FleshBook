@@ -14,12 +14,16 @@
   font-family: 'Cinzel', serif;
   font-size: 1.8em;
   color: #f5e6e6;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .connexion-form-input {
-  background: rgba(34, 16, 18, 0.8);
-  border: 1px solid rgba(128, 0, 0, 0.2);
+  background: #2a1a1a;
+  border: 1px solid #b00;
+  color: #fff;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
@@ -41,12 +45,16 @@
   font-family: 'Cinzel', serif;
   font-size: 1.8em;
   color: #f5e6e6;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .inscription-form-input {
-  background: rgba(34, 16, 18, 0.8);
-  border: 1px solid rgba(128, 0, 0, 0.2);
+  background: #2a1a1a;
+  border: 1px solid #b00;
+  color: #fff;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
@@ -54,4 +62,18 @@
 .inscription-form-input:focus {
   transform: scale(1.05);
   border-color: #e10600;
+}
+
+button {
+  background: #b00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d00;
 }

@@ -5,27 +5,28 @@ Créer une interface immersive et rituelle qui permet aux utilisateurs de consul
 
 ## Structure de la Vue
 
-### 1. **Sidebar Droite : L'Abîme Personnel**
-- **Mon Cercle** :
-  - Liste des groupes auxquels l'utilisateur appartient.
-  - Chaque groupe est représenté par un sigil ou une icône rituelle.
-  - Animation subtile pour indiquer l'activité récente dans le groupe.
-- **Mon Abîme** :
-  - Aperçu des publications récentes de l'utilisateur dans l'Abîme.
-  - Effet visuel de pulsation pour chaque publication, simulant un battement de cœur.
-  - Bouton pour accéder à la vue complète de l'Abîme personnel.
+### 1. **Sidebar Gauche : La Constellation Rituelle**
+- Affiche les cercles auxquels l'utilisateur appartient.
+- Animation d’aura pulsante pour indiquer l’activité récente.
+- Possibilité de "plier" certains cercles pour simplifier la navigation.
+- Inclut une entrée spéciale "Mon Abîme" comme raccourci personnel.
 
 ### 2. **Section Centrale : L'Abîme Collectif**
 - Fil principal des publications des cercles de l'utilisateur.
 - Effets visuels de fumée sombre et de braises mouvantes pour renforcer l'esthétique rituelle.
 - Indicateurs rituels pour chaque publication (exemple : aura autour des avatars).
 
-### 3. **Sidebar Gauche : Navigation et Interactions**
-- Liste des cercles actifs avec indicateurs d'activité.
-- Boutons pour accéder aux rituels spéciaux ou aux paramètres.
+### 3. **Sidebar Droite : Repli Intérieur**
+- Vue personnelle de l'utilisateur :
+  - **Mon Journal** : Publications personnelles récentes.
+  - **Mes Rituels Privés** : Accès à des fonctionnalités introspectives (à activer plus tard).
+- Affichage décoratif des sigils représentant les cercles, sous forme non interactive.
 
 ## Fonctionnalités
-- **Double Vue** : Permet de consulter simultanément l'Abîme personnel et collectif.
+- **Tripartition Sacrée** :
+  - Gauche : Monde extérieur (Cercles, Navigations, Portails).
+  - Centre : Fusion collective (Abîme vivant).
+  - Droite : Repli intérieur (Journal, Rituels privés).
 - **Interactions Rituelles** :
   - Réagir aux publications avec des gestes rituels (exemple : "offrir une flamme").
   - Partager des publications entre cercles.
@@ -43,10 +44,10 @@ Créer une interface immersive et rituelle qui permet aux utilisateurs de consul
    - Ajouter des endpoints pour récupérer les cercles et les publications personnelles.
    - Exemple : `GET /cercles` et `GET /abime/perso`.
 2. **Frontend** :
-   - Créer les composants pour la sidebar droite et la vue centrale.
+   - Créer les composants pour la sidebar gauche, la vue centrale et la sidebar droite.
    - Intégrer les animations rituelles.
 3. **Tests** :
-   - Vérifier la fluidité des interactions entre les deux vues.
+   - Vérifier la fluidité des interactions entre les trois vues.
    - Tester les performances avec des données volumineuses.
 
 ## Esthétique

@@ -1,0 +1,20 @@
+@import '../../styles/_variables.scss';
+
+.common-button {
+  background-color: $blood;
+  color: $bone;
+  border: none;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($blood, 10%);
+  }
+
+  &:disabled {
+    background-color: lighten($blood, 20%);
+    cursor: not-allowed;
+  }
+}

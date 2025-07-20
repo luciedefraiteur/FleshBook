@@ -6,7 +6,7 @@ export default function InscriptionForm({ onRegister, loading }) {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   return (
-    <form onSubmit={e => { e.preventDefault(); onRegister({ email, name, password }); }} style={{ background: '#1a0a0a', borderRadius: 12, padding: 16, margin: '1rem 0', boxShadow: '0 0 8px #800' }}>
+    <form onSubmit={e => { e.preventDefault(); onRegister({ email, name, password }); }} style={{ background: '#1a0a0a', borderRadius: 12, padding: 16, margin: '1rem 0', boxShadow: '0 0 8px #800', maxWidth: '400px', margin: 'auto' }}>
       <h3 style={{ color: '#b00', fontFamily: 'Cinzel, serif', marginBottom: 8 }}>Inscription (Pacte)</h3>
       <input
         type="email"

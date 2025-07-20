@@ -1,0 +1,22 @@
+@import '../../styles/_variables.scss';
+
+.common-input {
+  width: 100%;
+  padding: $spacing-sm;
+  margin-bottom: $spacing-md;
+  border: 1px solid $deep-red;
+  border-radius: 4px;
+  background-color: darken($dark-bg, 5%);
+  color: $bone;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $blood;
+    box-shadow: 0 0 5px $blood;
+  }
+
+  &--error {
+    border-color: #b00;
+  }
+}

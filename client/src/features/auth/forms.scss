@@ -1,0 +1,30 @@
+@import '../../styles/_variables.scss';
+
+.auth-form {
+  background: $dark-bg;
+  border-radius: $spacing-sm;
+  padding: $spacing-lg;
+  margin: $spacing-md 0;
+  box-shadow: 0 0 $spacing-sm $deep-red;
+
+  &-title {
+    color: $blood;
+    font-family: 'Cinzel', serif;
+    margin-bottom: $spacing-md;
+    text-align: center;
+  }
+
+  &-error {
+    color: #b00;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+  }
+
+  .common-input {
+    margin-bottom: $spacing-sm; // Ajustement de la marge pour les inputs
+  }
+
+  .common-button {
+    margin-top: $spacing-md;
+  }
+}
